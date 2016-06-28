@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="7dp"
+        android:id="@+id/cv"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="4dp"
+            android:paddingTop="5dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="5dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_txt_hospital_name"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:hint="Hospital Name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_txt_location_name"
+                android:layout_below="@+id/edit_txt_hospital_name"
+                android:layout_alignLeft="@+id/edit_txt_hospital_name"
+                android:layout_alignStart="@+id/edit_txt_hospital_name"
+                android:hint="Location" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tint="?attr/colorControlNormal"
+                android:background="@color/abc_search_url_text_normal"
+                android:id="@+id/spinner_blood_group"
+                android:layout_below="@+id/edit_txt_location_name"
+                android:layout_alignLeft="@+id/edit_txt_location_name"
+                android:layout_alignStart="@+id/edit_txt_location_name" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/edit_txt_date"
+                android:layout_below="@+id/spinner_blood_group"
+                android:layout_alignLeft="@+id/spinner_blood_group"
+                android:layout_alignStart="@+id/spinner_blood_group"
+                android:hint="Before Date" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/amount"
+                android:tint="?attr/colorControlNormal"
+                android:id="@+id/spinner_amount_blood"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Data"
+                android:id="@+id/send_btn"
+                android:layout_below="@+id/spinner_amount_blood"
+                android:layout_alignLeft="@+id/spinner_amount_blood"
+                android:layout_alignStart="@+id/spinner_amount_blood"
+                android:layout_marginTop="64dp"
+                android:background="#ffff6b64"
+                android:shadowColor="#ff888aff" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
